@@ -1,16 +1,9 @@
-Imports Microsoft.VisualBasic
 Imports System
 Imports System.Linq
 Imports System.Collections.Generic
-Imports System.ComponentModel
 Imports System.Data
-Imports System.Drawing
-Imports System.Text
 Imports System.Windows.Forms
-Imports DevExpress.XtraCharts
 Imports DevExpress.XtraPivotGrid
-Imports DevExpress.XtraCharts.Native
-Imports System.Collections
 
 Namespace WindowsApplication53
 	Partial Public Class Form1
@@ -85,19 +78,19 @@ Namespace WindowsApplication53
 
 		Private Sub PopulateTable()
 			Dim myTable As DataTable = dataSet1.Tables("Data")
-			myTable.Rows.Add(New Object() { "Aaa", DateTime.Today, 7 })
-			myTable.Rows.Add(New Object() { "Aaa", DateTime.Today.AddDays(1), 4 })
-			myTable.Rows.Add(New Object() { "Bbb", DateTime.Today, 12 })
-			myTable.Rows.Add(New Object() { "Bbb", DateTime.Today.AddDays(1), 14 })
-			myTable.Rows.Add(New Object() { "Ccc", DateTime.Today, 11 })
-			myTable.Rows.Add(New Object() { "Ccc", DateTime.Today.AddDays(1), 10 })
+			myTable.Rows.Add(New Object() {"Product A", DateTime.Today, 7})
+			myTable.Rows.Add(New Object() {"Product A", DateTime.Today.AddDays(1), 4})
+			myTable.Rows.Add(New Object() {"Product B", DateTime.Today, 12})
+			myTable.Rows.Add(New Object() {"Product B", DateTime.Today.AddDays(1), 14})
+			myTable.Rows.Add(New Object() {"Product C", DateTime.Today, 11})
+			myTable.Rows.Add(New Object() {"Product C", DateTime.Today.AddDays(1), 10})
 
-			myTable.Rows.Add(New Object() { "Aaa", DateTime.Today.AddYears(1), 4 })
-			myTable.Rows.Add(New Object() { "Aaa", DateTime.Today.AddYears(1).AddDays(1), 2 })
-			myTable.Rows.Add(New Object() { "Bbb", DateTime.Today.AddYears(1), 3 })
-			myTable.Rows.Add(New Object() { "Bbb", DateTime.Today.AddDays(1).AddYears(1), 1 })
-			myTable.Rows.Add(New Object() { "Ccc", DateTime.Today.AddYears(1), 8 })
-			myTable.Rows.Add(New Object() { "Ccc", DateTime.Today.AddDays(1).AddYears(1), 22 })
+			myTable.Rows.Add(New Object() {"Product A", DateTime.Today.AddYears(1), 4})
+			myTable.Rows.Add(New Object() {"Product A", DateTime.Today.AddYears(1).AddDays(1), 2})
+			myTable.Rows.Add(New Object() {"Product B", DateTime.Today.AddYears(1), 3})
+			myTable.Rows.Add(New Object() {"Product B", DateTime.Today.AddDays(1).AddYears(1), 1})
+			myTable.Rows.Add(New Object() {"Product C", DateTime.Today.AddYears(1), 8})
+			myTable.Rows.Add(New Object() {"Product C", DateTime.Today.AddDays(1).AddYears(1), 22})
 		End Sub
 
 

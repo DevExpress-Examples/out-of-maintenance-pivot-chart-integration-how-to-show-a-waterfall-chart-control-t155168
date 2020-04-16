@@ -148,7 +148,6 @@ namespace WindowsApplication53
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.chartTypeBar1 = new DevExpress.XtraCharts.UI.ChartTypeBar();
             this.createBarBaseItem1 = new DevExpress.XtraCharts.UI.CreateBarBaseItem();
             this.commandBarGalleryDropDown1 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.createLineBaseItem1 = new DevExpress.XtraCharts.UI.CreateLineBaseItem();
@@ -161,17 +160,12 @@ namespace WindowsApplication53
             this.commandBarGalleryDropDown5 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.createOtherSeriesTypesBaseItem1 = new DevExpress.XtraCharts.UI.CreateOtherSeriesTypesBaseItem();
             this.commandBarGalleryDropDown6 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.chartAppearanceBar1 = new DevExpress.XtraCharts.UI.ChartAppearanceBar();
             this.changePaletteGalleryBaseItem1 = new DevExpress.XtraCharts.UI.ChangePaletteGalleryBaseItem();
             this.commandBarGalleryDropDown7 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.changeAppearanceGalleryBaseBarManagerItem1 = new DevExpress.XtraCharts.UI.ChangeAppearanceGalleryBaseBarManagerItem();
             this.commandBarGalleryDropDown8 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.chartWizardBar1 = new DevExpress.XtraCharts.UI.ChartWizardBar();
-            this.runWizardChartItem1 = new DevExpress.XtraCharts.UI.RunWizardChartItem();
-            this.chartTemplatesBar1 = new DevExpress.XtraCharts.UI.ChartTemplatesBar();
             this.saveAsTemplateChartItem1 = new DevExpress.XtraCharts.UI.SaveAsTemplateChartItem();
             this.loadTemplateChartItem1 = new DevExpress.XtraCharts.UI.LoadTemplateChartItem();
-            this.chartPrintExportBar1 = new DevExpress.XtraCharts.UI.ChartPrintExportBar();
             this.printPreviewChartItem1 = new DevExpress.XtraCharts.UI.PrintPreviewChartItem();
             this.printChartItem1 = new DevExpress.XtraCharts.UI.PrintChartItem();
             this.createExportBaseItem1 = new DevExpress.XtraCharts.UI.CreateExportBaseItem();
@@ -191,7 +185,14 @@ namespace WindowsApplication53
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController();
+            this.runWizardChartItem1 = new DevExpress.XtraCharts.UI.RunWizardChartItem();
+            this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController(this.components);
+            this.chartTypeBar1 = new DevExpress.XtraCharts.UI.ChartTypeBar();
+            this.chartAppearanceBar1 = new DevExpress.XtraCharts.UI.ChartAppearanceBar();
+            this.chartDesignerBar1 = new DevExpress.XtraCharts.UI.ChartDesignerBar();
+            this.runDesignerChartItem1 = new DevExpress.XtraCharts.UI.RunDesignerChartItem();
+            this.chartTemplatesBar1 = new DevExpress.XtraCharts.UI.ChartTemplatesBar();
+            this.chartPrintExportBar1 = new DevExpress.XtraCharts.UI.ChartPrintExportBar();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
@@ -227,10 +228,11 @@ namespace WindowsApplication53
             this.fieldValue2,
             this.fieldDate1});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
+            this.pivotGridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pivotGridControl1.Name = "pivotGridControl1";
             this.pivotGridControl1.OptionsChartDataSource.FieldValuesProvideMode = DevExpress.XtraPivotGrid.PivotChartFieldValuesProvideMode.DisplayText;
             this.pivotGridControl1.OptionsChartDataSource.SelectionOnly = false;
-            this.pivotGridControl1.Size = new System.Drawing.Size(443, 431);
+            this.pivotGridControl1.Size = new System.Drawing.Size(590, 546);
             this.pivotGridControl1.TabIndex = 0;
             // 
             // dataSet1
@@ -266,7 +268,9 @@ namespace WindowsApplication53
             this.fiedName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.fiedName.AreaIndex = 0;
             this.fiedName.FieldName = "Name";
+            this.fiedName.MinWidth = 27;
             this.fiedName.Name = "fiedName";
+            this.fiedName.Width = 133;
             // 
             // fieldDate
             // 
@@ -274,8 +278,10 @@ namespace WindowsApplication53
             this.fieldDate.Caption = "Year";
             this.fieldDate.FieldName = "Date";
             this.fieldDate.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            this.fieldDate.MinWidth = 27;
             this.fieldDate.Name = "fieldDate";
             this.fieldDate.UnboundFieldName = "fieldDate";
+            this.fieldDate.Width = 133;
             // 
             // fieldValue
             // 
@@ -283,23 +289,29 @@ namespace WindowsApplication53
             this.fieldValue.AreaIndex = 0;
             this.fieldValue.Caption = "Sum";
             this.fieldValue.FieldName = "Value";
+            this.fieldValue.MinWidth = 27;
             this.fieldValue.Name = "fieldValue";
+            this.fieldValue.Width = 133;
             // 
             // fieldValue1
             // 
             this.fieldValue1.AreaIndex = 2;
             this.fieldValue1.Caption = "Count";
             this.fieldValue1.FieldName = "Value";
+            this.fieldValue1.MinWidth = 27;
             this.fieldValue1.Name = "fieldValue1";
             this.fieldValue1.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Count;
+            this.fieldValue1.Width = 133;
             // 
             // fieldValue2
             // 
             this.fieldValue2.AreaIndex = 1;
             this.fieldValue2.Caption = "Average";
             this.fieldValue2.FieldName = "Value";
+            this.fieldValue2.MinWidth = 27;
             this.fieldValue2.Name = "fieldValue2";
             this.fieldValue2.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Average;
+            this.fieldValue2.Width = 133;
             // 
             // fieldDate1
             // 
@@ -308,15 +320,18 @@ namespace WindowsApplication53
             this.fieldDate1.Caption = "Date";
             this.fieldDate1.FieldName = "Date";
             this.fieldDate1.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.Date;
+            this.fieldDate1.MinWidth = 27;
             this.fieldDate1.Name = "fieldDate1";
             this.fieldDate1.UnboundFieldName = "fieldDate1";
             this.fieldDate1.ValueFormat.FormatString = "dd MMM yyyy";
             this.fieldDate1.ValueFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.fieldDate1.Width = 133;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 62);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 61);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -326,25 +341,27 @@ namespace WindowsApplication53
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.chartControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1051, 431);
-            this.splitContainer1.SplitterDistance = 443;
+            this.splitContainer1.Size = new System.Drawing.Size(1401, 546);
+            this.splitContainer1.SplitterDistance = 590;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
             // 
             // chartControl1
             // 
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl1.EmptyChartText.Text = "";
             this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
             this.chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
             this.chartControl1.Legend.MaxVerticalPercentage = 30D;
+            this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
+            this.chartControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartControl1.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             this.chartControl1.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.SeriesTemplate.View = sideBySideRangeBarSeriesView1;
-            this.chartControl1.Size = new System.Drawing.Size(604, 431);
+            this.chartControl1.Size = new System.Drawing.Size(806, 546);
             this.chartControl1.SmallChartText.Text = "Increase the chart\'s size,\r\nto view its layout.\r\n    ";
             this.chartControl1.TabIndex = 0;
             // 
@@ -353,7 +370,7 @@ namespace WindowsApplication53
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.chartTypeBar1,
             this.chartAppearanceBar1,
-            this.chartWizardBar1,
+            this.chartDesignerBar1,
             this.chartTemplatesBar1,
             this.chartPrintExportBar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -387,22 +404,9 @@ namespace WindowsApplication53
             this.exportToJPEGChartItem1,
             this.exportToPNGChartItem1,
             this.exportToTIFFChartItem1,
-            this.createExportToImageBaseItem1});
-            this.barManager1.MaxItemId = 26;
-            // 
-            // chartTypeBar1
-            // 
-            this.chartTypeBar1.Control = this.chartControl1;
-            this.chartTypeBar1.DockCol = 0;
-            this.chartTypeBar1.DockRow = 0;
-            this.chartTypeBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.chartTypeBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.createBarBaseItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.createLineBaseItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.createPieBaseItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.createRotatedBarBaseItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.createAreaBaseItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.createOtherSeriesTypesBaseItem1)});
+            this.createExportToImageBaseItem1,
+            this.runDesignerChartItem1});
+            this.barManager1.MaxItemId = 27;
             // 
             // createBarBaseItem1
             // 
@@ -587,7 +591,7 @@ namespace WindowsApplication53
             chartControlCommandGalleryItemGroup2DArea1,
             chartControlCommandGalleryItemGroup3DArea1});
             this.commandBarGalleryDropDown5.Gallery.ImageSize = new System.Drawing.Size(32, 32);
-            this.commandBarGalleryDropDown5.Gallery.RowCount = 4;
+            this.commandBarGalleryDropDown5.Gallery.RowCount = 5;
             this.commandBarGalleryDropDown5.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown5.Manager = this.barManager1;
             this.commandBarGalleryDropDown5.Name = "commandBarGalleryDropDown5";
@@ -639,20 +643,10 @@ namespace WindowsApplication53
             chartControlCommandGalleryItemGroupRange1,
             chartControlCommandGalleryItemGroupGantt1});
             this.commandBarGalleryDropDown6.Gallery.ImageSize = new System.Drawing.Size(32, 32);
-            this.commandBarGalleryDropDown6.Gallery.RowCount = 7;
+            this.commandBarGalleryDropDown6.Gallery.RowCount = 9;
             this.commandBarGalleryDropDown6.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown6.Manager = this.barManager1;
             this.commandBarGalleryDropDown6.Name = "commandBarGalleryDropDown6";
-            // 
-            // chartAppearanceBar1
-            // 
-            this.chartAppearanceBar1.Control = this.chartControl1;
-            this.chartAppearanceBar1.DockCol = 1;
-            this.chartAppearanceBar1.DockRow = 0;
-            this.chartAppearanceBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.chartAppearanceBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.changePaletteGalleryBaseItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.changeAppearanceGalleryBaseBarManagerItem1)});
             // 
             // changePaletteGalleryBaseItem1
             // 
@@ -721,30 +715,6 @@ namespace WindowsApplication53
             this.commandBarGalleryDropDown8.Manager = this.barManager1;
             this.commandBarGalleryDropDown8.Name = "commandBarGalleryDropDown8";
             // 
-            // chartWizardBar1
-            // 
-            this.chartWizardBar1.Control = this.chartControl1;
-            this.chartWizardBar1.DockCol = 0;
-            this.chartWizardBar1.DockRow = 1;
-            this.chartWizardBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.chartWizardBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.runWizardChartItem1)});
-            // 
-            // runWizardChartItem1
-            // 
-            this.runWizardChartItem1.Id = 8;
-            this.runWizardChartItem1.Name = "runWizardChartItem1";
-            // 
-            // chartTemplatesBar1
-            // 
-            this.chartTemplatesBar1.Control = this.chartControl1;
-            this.chartTemplatesBar1.DockCol = 1;
-            this.chartTemplatesBar1.DockRow = 1;
-            this.chartTemplatesBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.chartTemplatesBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.saveAsTemplateChartItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.loadTemplateChartItem1)});
-            // 
             // saveAsTemplateChartItem1
             // 
             this.saveAsTemplateChartItem1.Id = 9;
@@ -754,17 +724,6 @@ namespace WindowsApplication53
             // 
             this.loadTemplateChartItem1.Id = 10;
             this.loadTemplateChartItem1.Name = "loadTemplateChartItem1";
-            // 
-            // chartPrintExportBar1
-            // 
-            this.chartPrintExportBar1.Control = this.chartControl1;
-            this.chartPrintExportBar1.DockCol = 2;
-            this.chartPrintExportBar1.DockRow = 1;
-            this.chartPrintExportBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.chartPrintExportBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.printPreviewChartItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.printChartItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.createExportBaseItem1)});
             // 
             // printPreviewChartItem1
             // 
@@ -789,6 +748,7 @@ namespace WindowsApplication53
             new DevExpress.XtraBars.LinkPersistInfo(this.createExportToImageBaseItem1)});
             this.createExportBaseItem1.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.SmallImagesText;
             this.createExportBaseItem1.Name = "createExportBaseItem1";
+            this.createExportBaseItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
             // 
             // exportToPDFChartItem1
             // 
@@ -862,28 +822,41 @@ namespace WindowsApplication53
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1051, 62);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1401, 61);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 493);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1051, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 607);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1401, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 62);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 431);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 61);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 546);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1051, 62);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 431);
+            this.barDockControlRight.Location = new System.Drawing.Point(1401, 61);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 546);
+            // 
+            // runWizardChartItem1
+            // 
+            this.runWizardChartItem1.Id = 8;
+            this.runWizardChartItem1.Name = "runWizardChartItem1";
             // 
             // chartBarController1
             // 
@@ -913,18 +886,84 @@ namespace WindowsApplication53
             this.chartBarController1.BarItems.Add(this.exportToJPEGChartItem1);
             this.chartBarController1.BarItems.Add(this.exportToPNGChartItem1);
             this.chartBarController1.BarItems.Add(this.exportToTIFFChartItem1);
+            this.chartBarController1.BarItems.Add(this.runDesignerChartItem1);
             this.chartBarController1.Control = this.chartControl1;
+            // 
+            // chartTypeBar1
+            // 
+            this.chartTypeBar1.Control = this.chartControl1;
+            this.chartTypeBar1.DockCol = 0;
+            this.chartTypeBar1.DockRow = 1;
+            this.chartTypeBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.chartTypeBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.createBarBaseItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.createLineBaseItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.createPieBaseItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.createRotatedBarBaseItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.createAreaBaseItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.createOtherSeriesTypesBaseItem1)});
+            this.chartTypeBar1.Offset = 1108;
+            // 
+            // chartAppearanceBar1
+            // 
+            this.chartAppearanceBar1.Control = this.chartControl1;
+            this.chartAppearanceBar1.DockCol = 1;
+            this.chartAppearanceBar1.DockRow = 1;
+            this.chartAppearanceBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.chartAppearanceBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.changePaletteGalleryBaseItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.changeAppearanceGalleryBaseBarManagerItem1)});
+            this.chartAppearanceBar1.Offset = 1364;
+            // 
+            // chartDesignerBar1
+            // 
+            this.chartDesignerBar1.Control = this.chartControl1;
+            this.chartDesignerBar1.DockCol = 0;
+            this.chartDesignerBar1.DockRow = 0;
+            this.chartDesignerBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.chartDesignerBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.runDesignerChartItem1)});
+            this.chartDesignerBar1.Offset = 920;
+            // 
+            // runDesignerChartItem1
+            // 
+            this.runDesignerChartItem1.Id = 26;
+            this.runDesignerChartItem1.Name = "runDesignerChartItem1";
+            // 
+            // chartTemplatesBar1
+            // 
+            this.chartTemplatesBar1.Control = this.chartControl1;
+            this.chartTemplatesBar1.DockCol = 1;
+            this.chartTemplatesBar1.DockRow = 0;
+            this.chartTemplatesBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.chartTemplatesBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.saveAsTemplateChartItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.loadTemplateChartItem1)});
+            this.chartTemplatesBar1.Offset = 1021;
+            // 
+            // chartPrintExportBar1
+            // 
+            this.chartPrintExportBar1.Control = this.chartControl1;
+            this.chartPrintExportBar1.DockCol = 2;
+            this.chartPrintExportBar1.DockRow = 0;
+            this.chartPrintExportBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.chartPrintExportBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.printPreviewChartItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.printChartItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.createExportBaseItem1)});
+            this.chartPrintExportBar1.Offset = 1148;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 493);
+            this.ClientSize = new System.Drawing.Size(1401, 607);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -948,6 +987,7 @@ namespace WindowsApplication53
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -968,7 +1008,6 @@ namespace WindowsApplication53
         private System.Windows.Forms.SplitContainer splitContainer1;
         private DevExpress.XtraCharts.ChartControl chartControl1;
         private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraCharts.UI.ChartTypeBar chartTypeBar1;
         private DevExpress.XtraCharts.UI.CreateBarBaseItem createBarBaseItem1;
         private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown1;
         private DevExpress.XtraCharts.UI.CreateLineBaseItem createLineBaseItem1;
@@ -981,17 +1020,14 @@ namespace WindowsApplication53
         private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown5;
         private DevExpress.XtraCharts.UI.CreateOtherSeriesTypesBaseItem createOtherSeriesTypesBaseItem1;
         private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown6;
-        private DevExpress.XtraCharts.UI.ChartAppearanceBar chartAppearanceBar1;
         private DevExpress.XtraCharts.UI.ChangePaletteGalleryBaseItem changePaletteGalleryBaseItem1;
         private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown7;
         private DevExpress.XtraCharts.UI.ChangeAppearanceGalleryBaseBarManagerItem changeAppearanceGalleryBaseBarManagerItem1;
         private DevExpress.XtraBars.Commands.CommandBarGalleryDropDown commandBarGalleryDropDown8;
-        private DevExpress.XtraCharts.UI.ChartWizardBar chartWizardBar1;
+        //private DevExpress.XtraCharts.UI.ChartWizardBar chartWizardBar1;
         private DevExpress.XtraCharts.UI.RunWizardChartItem runWizardChartItem1;
-        private DevExpress.XtraCharts.UI.ChartTemplatesBar chartTemplatesBar1;
         private DevExpress.XtraCharts.UI.SaveAsTemplateChartItem saveAsTemplateChartItem1;
         private DevExpress.XtraCharts.UI.LoadTemplateChartItem loadTemplateChartItem1;
-        private DevExpress.XtraCharts.UI.ChartPrintExportBar chartPrintExportBar1;
         private DevExpress.XtraCharts.UI.PrintPreviewChartItem printPreviewChartItem1;
         private DevExpress.XtraCharts.UI.PrintChartItem printChartItem1;
         private DevExpress.XtraCharts.UI.CreateExportBaseItem createExportBaseItem1;
@@ -1012,6 +1048,12 @@ namespace WindowsApplication53
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraCharts.UI.ChartBarController chartBarController1;
+        private DevExpress.XtraCharts.UI.ChartTypeBar chartTypeBar1;
+        private DevExpress.XtraCharts.UI.ChartAppearanceBar chartAppearanceBar1;
+        private DevExpress.XtraCharts.UI.ChartDesignerBar chartDesignerBar1;
+        private DevExpress.XtraCharts.UI.RunDesignerChartItem runDesignerChartItem1;
+        private DevExpress.XtraCharts.UI.ChartTemplatesBar chartTemplatesBar1;
+        private DevExpress.XtraCharts.UI.ChartPrintExportBar chartPrintExportBar1;
     }
 }
 
