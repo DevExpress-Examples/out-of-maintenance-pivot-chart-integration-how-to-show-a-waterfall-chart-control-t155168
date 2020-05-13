@@ -120,102 +120,10 @@
   <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="BarManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>133, 17</value>
+  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>116, 17</value>
   </metadata>
-  <data name="CreateRotatedFullStackedBarChartItem2.Description" xml:space="preserve">
-    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
-
-Use it when the values on the chart represent durations or when the category text is very long.</value>
-  </data>
-  <data name="CreateRotatedFullStackedBarChartItem2.Hint" xml:space="preserve">
-    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
-
-Use it when the values on the chart represent durations or when the category text is very long.</value>
-  </data>
-  <data name="CreateArea3DChartItem2.Description" xml:space="preserve">
-    <value>Displays data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area.
-
-Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
-  </data>
-  <data name="CreateArea3DChartItem2.Hint" xml:space="preserve">
-    <value>Displays data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area.
-
-Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
-  </data>
-  <data name="CreateFullStackedArea3DChartItem2.Description" xml:space="preserve">
-    <value>Displays data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
-
-Use it for comparing the percentage values of several series for the same point arguments.</value>
-  </data>
-  <data name="CreateFullStackedArea3DChartItem2.Hint" xml:space="preserve">
-    <value>Displays data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
-
-Use it for comparing the percentage values of several series for the same point arguments.</value>
-  </data>
-  <data name="CreateFunnelChartItem2.Description" xml:space="preserve">
-    <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
-  </data>
-  <data name="CreateFunnelChartItem2.Hint" xml:space="preserve">
-    <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
-  </data>
-  <data name="CreateFunnel3DChartItem2.Description" xml:space="preserve">
-    <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
-  </data>
-  <data name="CreateFunnel3DChartItem2.Hint" xml:space="preserve">
-    <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
-  </data>
-  <data name="CreateStockChartItem2.Description" xml:space="preserve">
-    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="CreateStockChartItem2.Hint" xml:space="preserve">
-    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="CreateCandleStickChartItem2.Description" xml:space="preserve">
-    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="CreateCandleStickChartItem2.Hint" xml:space="preserve">
-    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="CreateRangeAreaChartItem2.Description" xml:space="preserve">
-    <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
-
-Use it when you need to accentuate the delta between the start and end values.</value>
-  </data>
-  <data name="CreateRangeAreaChartItem2.Hint" xml:space="preserve">
-    <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
-
-Use it when you need to accentuate the delta between the start and end values.</value>
-  </data>
-  <data name="CreateRangeArea3DChartItem2.Description" xml:space="preserve">
-    <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
-
-Use it when you need to accentuate the delta between the start and end values.</value>
-  </data>
-  <data name="CreateRangeArea3DChartItem2.Hint" xml:space="preserve">
-    <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
-
-Use it when you need to accentuate the delta between the start and end values.</value>
-  </data>
-  <data name="CreateSideBySideGanttChartItem2.Description" xml:space="preserve">
-    <value>Displays horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
-
-Use it when it's necessary to show activity bars from different series one above another, to compare their duration.</value>
-  </data>
-  <data name="CreateSideBySideGanttChartItem2.Hint" xml:space="preserve">
-    <value>Displays horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
-
-Use it when it's necessary to show activity bars from different series one above another, to compare their duration.</value>
-  </data>
-  <metadata name="ChartBarController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>281, 17</value>
+  <metadata name="chartBarController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>241, 17</value>
   </metadata>
 </root>
