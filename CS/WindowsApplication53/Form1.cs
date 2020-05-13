@@ -1,3 +1,4 @@
+using DevExpress.XtraCharts;
 using DevExpress.XtraPivotGrid;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,27 @@ namespace WindowsApplication53 {
         }
 
         private void BindChartData() {
+            chartControl1.BoundDataChanged += ChartControl1_BoundDataChanged;
             chartControl1.DataSource = CreateIntermediateData(pivotGridControl1);
             chartControl1.SeriesDataMember = "Series";
-            chartControl1.SeriesTemplate.ValueDataMembers.AddRange("Value1", "Value2");
+            chartControl1.SeriesTemplate.ValueDataMembers.AddRange("Value");
             chartControl1.SeriesTemplate.ArgumentDataMember = "Argument";
+        }
+
+        void ChartControl1_BoundDataChanged(object sender, EventArgs e) {
+            XYDiagram diagram = (XYDiagram)chartControl1.Diagram;
+            diagram.AxisX.Label.Visible = false;
+            diagram.PaneLayout.Direction = PaneLayoutDirection.Horizontal;
+            diagram.DefaultPane.Visibility = ChartElementVisibility.Hidden;
+            for (int i = 0; i < chartControl1.Series.Count; i++) {
+                XYDiagramPane pane = new XYDiagramPane();
+                Series series = chartControl1.Series[i];
+                pane.Title.Text = series.Name;
+                pane.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+                diagram.Panes.Add(pane);
+                ((XYDiagramSeriesViewBase)series.View).Pane = pane;
+                ((WaterfallSeriesView)series.View).ValueOptions.ShowTotal = true;
+            }
         }
 
         DataTable CreateIntermediateData(PivotGridControl pivotgridControl) {
@@ -29,14 +47,21 @@ namespace WindowsApplication53 {
             DataTable intermediateDS = new DataTable();
             intermediateDS.Columns.Add("Argument", typeof(string));
             intermediateDS.Columns.Add("Series", typeof(string));
-            intermediateDS.Columns.Add("Value1", typeof(decimal));
-            intermediateDS.Columns.Add("Value2", typeof(decimal));
+            intermediateDS.Columns.Add("Value", typeof(decimal));
 
-            string prevArgument = string.Empty;
-            decimal sum = 0;
             foreach (PivotSummaryDataRow record in summaryDataSource) {
                 DataRow row = intermediateDS.NewRow();
                 if (pivotGridControl1.OptionsChartDataSource.ProvideDataByColumns) {
+                    List<string> rowValues = new List<string>();
+                    foreach (PivotGridField rowField in pivotGridControl1.GetFieldsByArea(PivotArea.RowArea))
+                        rowValues.Add(record[rowField].ToString());
+                    row["Series"] = string.Join("|", rowValues);
+
+                    List<string> columnValues = new List<string>();
+                    foreach (PivotGridField columnField in pivotGridControl1.GetFieldsByArea(PivotArea.ColumnArea))
+                        columnValues.Add(record[columnField].ToString());
+                    row["Argument"] = string.Join("|", columnValues);
+                } else {
                     List<string> columnValues = new List<string>();
                     foreach (PivotGridField columnField in pivotGridControl1.GetFieldsByArea(PivotArea.ColumnArea))
                         columnValues.Add(record[columnField].ToString());
@@ -45,26 +70,8 @@ namespace WindowsApplication53 {
                     foreach (PivotGridField rowField in pivotGridControl1.GetFieldsByArea(PivotArea.RowArea))
                         rowValues.Add(record[rowField].ToString());
                     row["Argument"] = string.Join("|", rowValues);
-
-                } else {
-                    List<string> columnValues = new List<string>();
-                    foreach (PivotGridField columnField in pivotGridControl1.GetFieldsByArea(PivotArea.ColumnArea))
-                        columnValues.Add(record[columnField].ToString());
-                    row["Argument"] = string.Join("|", columnValues);
-                    List<string> rowValues = new List<string>();
-                    foreach (PivotGridField rowField in pivotGridControl1.GetFieldsByArea(PivotArea.RowArea))
-                        rowValues.Add(record[rowField].ToString());
-                    row["Series"] = string.Join("|", rowValues);
-
                 }
-
-                if (prevArgument != row["Argument"].ToString()) {
-                    prevArgument = row["Argument"].ToString();
-                    sum = 0;
-                }
-                row["Value1"] = sum;
-                sum += (decimal)record[pivotGridControl1.GetFieldByArea(PivotArea.DataArea, 0)];
-                row["Value2"] = sum;
+                row["Value"] = (decimal)record[pivotGridControl1.GetFieldByArea(PivotArea.DataArea, 0)];
                 intermediateDS.Rows.Add(row);
             }
             return intermediateDS;
@@ -86,7 +93,5 @@ namespace WindowsApplication53 {
             myTable.Rows.Add(new object[] { "Product C", DateTime.Today.AddYears(1), 8 });
             myTable.Rows.Add(new object[] { "Product C", DateTime.Today.AddDays(1).AddYears(1), 22 });
         }
-
-
     }
 }

@@ -7,7 +7,7 @@
 # Pivot Chart Integration - How to show a waterfall chart control
 
 
-This example demonstrates how to use the [Side-by-Side Range Bars](https://docs.devexpress.com/WindowsForms/2985/Controls-and-Libraries/Chart-Control/Series-Views/2D-Series-Views/Bar-Series-Views/Side-by-Side-Range-Bar-Chart) series view to visualize the pivot grid data as a waterfall chart.
+This example demonstrates how to visualize the pivot grid data as a waterfall chart.
 
 
 See Also:
