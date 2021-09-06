@@ -7,6 +7,8 @@
 
 This example shows how to visualize the pivot grid data as a waterfall chart.
 
+![pivot-waterfall-chart-integration](img/pivot-waterfall-chart-integration.png)
+
 <!-- default file list -->
 ## Files to Look At
 
